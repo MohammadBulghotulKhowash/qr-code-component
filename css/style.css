@@ -1,0 +1,107 @@
+:root {
+  --bg-view: hsl(220, 15%, 55%);
+  --card-bg: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  background-color: var(--bg-view);
+  /* padding: 50px; */
+  /* max-width: 375px; */
+  /* width: 100vh; */
+}
+
+main {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  margin: 4.5%;
+  /* width: 100vh; */
+  flex-direction: column;
+  /* border: 10px solid black; */
+}
+
+div.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 290px;
+  background-color: var(--card-bg);
+}
+
+main .content-wrapper .qr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* margin-top: -20px; */
+}
+
+main .content-wrapper .qr img {
+  /* display: inherit; */
+  width: 330px;
+  border-radius: 45px;
+  padding: 10%;
+  padding-top: -5%;
+}
+
+main .content-wrapper .text {
+  text-align: center;
+  padding-top: 0;
+  margin-top: -35px;
+  padding: 20px;
+}
+
+main .content-wrapper.text h3 {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+main .content-wrapper .text p {
+  margin-block: 10px;
+  /* padding: 20px; */
+  color: hsl(212, 45%, 89%);
+  font-size: 15px;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  /* margin-top: 50px; */
+  padding: 20px;
+}
+
+@media screen and (min-width: 475px) and (max-width:1020px) {
+  main {
+    margin: 30%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    margin: 30%;
+  }
+
+  div.content-wrapper {
+    width: 250px;
+  }
+
+  main .content-wrapper .qr img {
+    margin-top: 8px;
+    width: 280px;
+  }
+}
